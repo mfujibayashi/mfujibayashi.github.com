@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    <entry>
+      <title><![CDATA[Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル]]></title>
+      <url>/java/2020/05/01/javaarraycopy/</url>
+      <content type="text"><![CDATA[はじめにJavaでbyte配列からshort配列、Int配列にコピーする、その逆方向へコピーするコードを書く機会がありました。初めは普通にシフト演算で作ったのですが、Javaらしい書き方があるはずだとのことで調べたところ、ByteBufferクラスを使った書き方があることが解りました。githubのリポジトリgithubのリポジトリポイントByteBuffer.order()でエンディアンを指定します。値を入力するときは、ByteBuffer.put(), ByteBuffer.putShort(), ByteBuffer.pusInt()を使います。値を得るときは、ByteBuffer.get(), ByteBuffer.getShort(), ByteBuffer.getInt()を使います。これでエンディアンを考慮した値のコピーが出来ます。例えば、byte配列からInt配列へのコピーは次のようなコードになります。  public  void copyArrayFromByte(byte[] byteArray, int[] intArray){    int length = intArray.length;    int i;    ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES*length);    if(isEndian == Endian.BIG_ENDIAN){        buffer.order(ByteOrder.BIG_ENDIAN);    }else{        buffer.order(ByteOrder.LITTLE_ENDIAN);    }    for(i=0; i&lt; length*4; i++){      buffer.put(byteArray[i]);    }    buffer.flip();    for(i=0; i&lt; length; i++){      intArray[i] =  buffer.getInt();    }  }「ビッグエンディアンは最上位桁がアドレス下位になるので」、みたいなことを思い出さずに済みます。サンプルコードサンプルコードでは配列間コピーをするクラスを作成しています。コードを見て直ぐに内容がわかると思うので、参考にしてください。最後にもうちょっと良い書き方がありそうな気がしています。]]></content>
+      <categories>
+        
+          <category> Java </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+</search>

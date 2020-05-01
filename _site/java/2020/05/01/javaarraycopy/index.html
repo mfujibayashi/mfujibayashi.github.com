@@ -425,9 +425,9 @@
 <p><a href="https://github.com/mfujibayashi/JavaArrayCoppy">githubのリポジトリ</a></p>
 
 <h1 id="ポイント">ポイント</h1>
-<p><code class="highlighter-rouge">ByteBuffer.order()</code>でエンディアンを指定します。<br />
-値を入力するときは、<code class="highlighter-rouge">ByteBuffer.put()</code>, <code class="highlighter-rouge">ByteBuffer.putShort()</code>, <code class="highlighter-rouge">ByteBuffer.pusInt()</code>を使います。<br />
-値を得るときは、<code class="highlighter-rouge">ByteBuffer.get()</code>, <code class="highlighter-rouge">ByteBuffer.getShort()</code>, <code class="highlighter-rouge">ByteBuffer.getInt()</code>を使います。</p>
+<p><code class="language-plaintext highlighter-rouge">ByteBuffer.order()</code>でエンディアンを指定します。<br />
+値を入力するときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.put()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.putShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.pusInt()</code>を使います。<br />
+値を得るときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.get()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getInt()</code>を使います。</p>
 
 <p>これでエンディアンを考慮した値のコピーが出来ます。<br />
 例えば、byte配列からInt配列へのコピーは次のようなコードになります。</p>
@@ -436,11 +436,11 @@
     <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">intArray</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
 
-    <span class="n">ByteBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">ByteBuffer</span><span class="o">.</span><span class="na">allocate</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">BYTES</span><span class="o">*</span><span class="n">length</span><span class="o">);</span>
-    <span class="k">if</span><span class="o">(</span><span class="n">isEndian</span> <span class="o">==</span> <span class="n">Endian</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">){</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="n">ByteOrder</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">);</span>
+    <span class="nc">ByteBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nc">ByteBuffer</span><span class="o">.</span><span class="na">allocate</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">BYTES</span><span class="o">*</span><span class="n">length</span><span class="o">);</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">isEndian</span> <span class="o">==</span> <span class="nc">Endian</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">){</span>
+        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">);</span>
     <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="n">ByteOrder</span><span class="o">.</span><span class="na">LITTLE_ENDIAN</span><span class="o">);</span>
+        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">LITTLE_ENDIAN</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">length</span><span class="o">*</span><span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>

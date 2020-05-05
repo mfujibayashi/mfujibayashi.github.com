@@ -1,871 +1,58 @@
-
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ja" class="no-js">
+  <head>
+    <meta charset="utf-8">
 
+<!-- begin _includes/seo.html --><title>ちょっとしたメモ置き場</title>
+<meta name="description" content="プログラミングメモなどの置き場 ">
 
 
+  <meta name="author" content="FUJIBAYASHI, Masanori">
 
 
-
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="ja">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="ちょっとしたメモ置き場" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="プログラミングメモなどの置き場">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja">
+<meta property="og:site_name" content="ちょっとしたメモ置き場">
 <meta property="og:title" content="ちょっとしたメモ置き場">
 <meta property="og:url" content="http://localhost:4000/">
-<meta property="og:site_name" content="ちょっとしたメモ置き場">
-<meta property="og:description" content="プログラミングメモなどの置き場">
-<meta property="og:locale" content="ja">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ちょっとしたメモ置き場">
-<meta name="twitter:description" content="プログラミングメモなどの置き場">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: false,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://localhost:4000/"/>
+  <meta property="og:description" content="プログラミングメモなどの置き場 ">
 
 
 
 
 
-  <title>ちょっとしたメモ置き場</title>
+
+
+
+
+
+
+  
+
   
 
 
+<link rel="canonical" href="http://localhost:4000/">
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
-
-  
-  
-
-  <div class="container sidebar-position-left page-home ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
-  <div class="site-meta ">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">ちょっとしたメモ置き場</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            ホーム
-          </a>
-        </li>
-      
-        
-        
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            カテゴリ
-          </a>
-        </li>
-      
-        
-        
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            アーカイブ
-          </a>
-        </li>
-      
-        
-        
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            タグ
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-
-
-<section id="posts" class="posts-expand">
-  
+      "@type": "Person",
+      "name": "FUJIBAYASHI, Masanori",
+      "url": "http://localhost:4000/"
     
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/java/android/2020/05/05/android_saf/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FUJIBAYASHI, Masanori">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="assets/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ちょっとしたメモ置き場">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-                
-                <a class="post-title-link" href="/java/android/2020/05/05/android_saf/" itemprop="url">
-                AndroidのStorage Access Frameworkを使ったサンプル
-              </a>
-            
-          
-        </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="" itemprop="dateCreated datePublished" datetime="2020-05-05T21:00:00+09:00">
-                2020-05-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Java" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Android" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <h1 id="はじめに">はじめに</h1>
-<p>AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、<a href="https://developer.android.com/guide/topics/providers/document-provider?hl=JA">Storage Access Framework(SAF)</a>を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。</p>
-
-<h1 id="背景">背景</h1>
-<p>お仕事関係でAndroidプログラムを作る必要が発生しました。<br />
-要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。<br />
-Androidのストレージ周りは複雑怪奇・・・。<br />
-内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。</p>
-
-<p>私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法は<a href="https://developer.android.com/guide/topics/providers/document-provider?hl=JA">SAF</a>しかありませんでした。<br />
-Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、<a href="https://developer.android.com/guide/topics/providers/document-provider?hl=JA">SAF</a>を使うべきです。</p>
-
-<h1 id="サンプルコードのリポジトリ">サンプルコードのリポジトリ</h1>
-<p><a href="https://github.com/mfujibayashi/AndroidSAFsample">githubのリポジトリ</a></p>
-
-<h1 id="サンプルコードの簡単な説明">サンプルコードの簡単な説明</h1>
-<p>SAFはMIME Typeでフィルターできます。<br />
-そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときは<code class="language-plaintext highlighter-rouge">audio/*, video/*</code>でフィルター、”Image Open”ボタンをタップしたときは<code class="language-plaintext highlighter-rouge">image/*</code>でフィルターするようにしています。<br />
-コードそのものは、Googleのドキュメントの内容そのままです。</p>
-
-<p>“Music Open”の選択結果をVideo Viewで再生させています。<br />
-また、”Image Open”の選択結果をImage Viewで表示させています。</p>
-
-<h1 id="androidのui">AndroidのUI</h1>
-<p>Video View, Audio Viewの表示切り替えにFragmentを使っています。<br />
-が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。</p>
-
-<h1 id="最後に">最後に</h1>
-<p>AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。</p>
-
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/java/android/2020/05/05/android_saf/#" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-        
-        
-        
-        
-          <div class="post-eof"></div>
-        
-      
-    </footer>
-  </article>
-
-  
-    
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/java/2020/05/01/javaarraycopy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FUJIBAYASHI, Masanori">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="assets/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ちょっとしたメモ置き場">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-                
-                <a class="post-title-link" href="/java/2020/05/01/javaarraycopy/" itemprop="url">
-                Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル
-              </a>
-            
-          
-        </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="" itemprop="dateCreated datePublished" datetime="2020-05-01T00:00:00+09:00">
-                2020-05-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Java" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <h1 id="はじめに">はじめに</h1>
-
-<p>Javaでbyte配列からshort配列、Int配列にコピーする、その逆方向へコピーするコードを書く機会がありました。<br />
-初めは普通にシフト演算で作ったのですが、Javaらしい書き方があるはずだとのことで調べたところ、ByteBufferクラスを使った書き方があることが解りました。</p>
-
-<h1 id="githubのリポジトリ">githubのリポジトリ</h1>
-<p><a href="https://github.com/mfujibayashi/JavaArrayCoppy">githubのリポジトリ</a></p>
-
-<h1 id="ポイント">ポイント</h1>
-<p><code class="language-plaintext highlighter-rouge">ByteBuffer.order()</code>でエンディアンを指定します。<br />
-値を入力するときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.put()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.putShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.pusInt()</code>を使います。<br />
-値を得るときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.get()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getInt()</code>を使います。</p>
-
-<p>これでエンディアンを考慮した値のコピーが出来ます。<br />
-例えば、byte配列からInt配列へのコピーは次のようなコードになります。</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19</pre></td><td class="code"><pre class="highlight"><code>  <span class="kd">public</span>  <span class="kt">void</span> <span class="nf">copyArrayFromByte</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">byteArray</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">intArray</span><span class="o">){</span>
-    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">intArray</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
-
-    <span class="nc">ByteBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nc">ByteBuffer</span><span class="o">.</span><span class="na">allocate</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">BYTES</span><span class="o">*</span><span class="n">length</span><span class="o">);</span>
-    <span class="k">if</span><span class="o">(</span><span class="n">isEndian</span> <span class="o">==</span> <span class="nc">Endian</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">){</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">);</span>
-    <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">LITTLE_ENDIAN</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">length</span><span class="o">*</span><span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-      <span class="n">buffer</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">byteArray</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-    <span class="o">}</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="na">flip</span><span class="o">();</span>
-    <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-      <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span>  <span class="n">buffer</span><span class="o">.</span><span class="na">getInt</span><span class="o">();</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-</code></pre></td></tr></tbody></table></div></div>
-
-<p>「ビッグエンディアンは最上位桁がアドレス下位になるので」、みたいなことを思い出さずに済みます。</p>
-
-<h1 id="サンプルコード">サンプルコード</h1>
-
-<p>サンプルコードでは配列間コピーをするクラスを作成しています。<br />
-コードを見て直ぐに内容がわかると思うので、参考にしてください。</p>
-
-<h1 id="最後に">最後に</h1>
-
-<p>もうちょっと良い書き方がありそうな気がしています。</p>
-
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/java/2020/05/01/javaarraycopy/#" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-        
-        
-        
-        
-          <div class="post-eof"></div>
-        
-      
-    </footer>
-  </article>
-
-  
-</section>
-
-
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/assets/images/avatar.gif"
-               alt="FUJIBAYASHI, Masanori" />
-          <p class="site-author-name" itemprop="name">FUJIBAYASHI, Masanori</p>
-           
-              <p class="site-description motion-element" itemprop="description">プログラミングメモなどの置き場</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">ポスト</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">カテゴリ</span>
-              </a>
-            </div>
-          
-
-          
-
-        </nav>
-
-        
-        
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">FUJIBAYASHI, Masanori</span>
-</div>
-
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
   }
 </script>
 
@@ -874,160 +61,337 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
 
 
 
+<!-- end _includes/seo.html -->
 
 
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ちょっとしたメモ置き場 Feed">
 
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
 
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
 
 
+    <!-- start custom head snippets -->
 
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<!-- end custom head snippets -->
 
+  </head>
 
+  <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
 
-
-  
-   
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  
-  
-  
-  
-  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
 
     
 
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          ちょっとしたメモ置き場
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">メニュー</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">FUJIBAYASHI, Masanori</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>大学時代の専門は半導体工学（デジタル回路アーキテクチャ）。現在は組み込みソフトウェア開発エンジニア。</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">フォロー</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Osaka, Japan</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/mfujibayashi/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
+    
+
+<h3 class="archive__subtitle">最近の投稿</h3>
+
+
+
+
   
 
 
 
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/android/android_saf/" rel="permalink">AndroidのStorage Access Frameworkを使ったサンプル
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">はじめに
+AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、Storage Access Framework(SAF)を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。
+
+背景
+お仕事関係でAndroidプログラムを作る必要が発生しました。
+要件の...</p>
+  </article>
+</div>
 
 
   
 
 
 
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/javaarraycopy/" rel="permalink">Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
-  
 
-  
+  less than 1 minute read
 
-  
-  
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">はじめに
+
+Javaでbyte配列からshort配列、Int配列にコピーする、その逆方向へコピーするコードを書く機会がありました。
+初めは普通にシフト演算で作ったのですが、Javaらしい書き方があるはずだとのことで調べたところ、ByteBufferクラスを使った書き方があることが解りました。
+
+githubのリポ...</p>
+  </article>
+</div>
 
 
-  
 
-  
 
-  
 
-</body>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>フォロー</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 FUJIBAYASHI, Masanori. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
 </html>
-

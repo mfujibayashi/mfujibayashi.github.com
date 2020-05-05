@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "AndroidのStorage Access Frameworkを使ったサンプル"
 date:   2020-05-05 21:00 +0900
 categories: "Java Android"

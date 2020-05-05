@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル"
 date:   2020-05-01  +0900
 categories: "Java"

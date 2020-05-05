@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-01T22:37:32+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">ちょっとしたメモ置き場</title><subtitle>プログラミングメモなどの置き場</subtitle><author><name>FUJIBAYASHI, Masanori</name></author><entry><title type="html">Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル</title><link href="http://localhost:4000/java/2020/05/01/javaarraycopy/" rel="alternate" type="text/html" title="Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル" /><published>2020-05-01T00:00:00+09:00</published><updated>2020-05-01T00:00:00+09:00</updated><id>http://localhost:4000/java/2020/05/01/javaarraycopy</id><content type="html" xml:base="http://localhost:4000/java/2020/05/01/javaarraycopy/">&lt;h1 id=&quot;はじめに&quot;&gt;はじめに&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-05T23:48:28+09:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">ちょっとしたメモ置き場</title><subtitle>プログラミングメモなどの置き場</subtitle><author><name>FUJIBAYASHI, Masanori</name></author><entry><title type="html">AndroidのStorage Access Frameworkを使ったサンプル</title><link href="http://localhost:4000/java/android/2020/05/05/android_saf/" rel="alternate" type="text/html" title="AndroidのStorage Access Frameworkを使ったサンプル" /><published>2020-05-05T21:00:00+09:00</published><updated>2020-05-05T21:00:00+09:00</updated><id>http://localhost:4000/java/android/2020/05/05/android_saf</id><content type="html" xml:base="http://localhost:4000/java/android/2020/05/05/android_saf/">&lt;h1 id=&quot;はじめに&quot;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、&lt;a href=&quot;https://developer.android.com/guide/topics/providers/document-provider?hl=JA&quot;&gt;Storage Access Framework(SAF)&lt;/a&gt;を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。&lt;/p&gt;
+
+&lt;h1 id=&quot;背景&quot;&gt;背景&lt;/h1&gt;
+&lt;p&gt;お仕事関係でAndroidプログラムを作る必要が発生しました。&lt;br /&gt;
+要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。&lt;br /&gt;
+Androidのストレージ周りは複雑怪奇・・・。&lt;br /&gt;
+内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。&lt;/p&gt;
+
+&lt;p&gt;私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法は&lt;a href=&quot;https://developer.android.com/guide/topics/providers/document-provider?hl=JA&quot;&gt;SAF&lt;/a&gt;しかありませんでした。&lt;br /&gt;
+Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、&lt;a href=&quot;https://developer.android.com/guide/topics/providers/document-provider?hl=JA&quot;&gt;SAF&lt;/a&gt;を使うべきです。&lt;/p&gt;
+
+&lt;h1 id=&quot;サンプルコードのリポジトリ&quot;&gt;サンプルコードのリポジトリ&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mfujibayashi/AndroidSAFsample&quot;&gt;githubのリポジトリ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;サンプルコードの簡単な説明&quot;&gt;サンプルコードの簡単な説明&lt;/h1&gt;
+&lt;p&gt;SAFはMIME Typeでフィルターできます。&lt;br /&gt;
+そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときは&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;audio/*, video/*&lt;/code&gt;でフィルター、”Image Open”ボタンをタップしたときは&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image/*&lt;/code&gt;でフィルターするようにしています。&lt;br /&gt;
+コードそのものは、Googleのドキュメントの内容そのままです。&lt;/p&gt;
+
+&lt;p&gt;“Music Open”の選択結果をVideo Viewで再生させています。&lt;br /&gt;
+また、”Image Open”の選択結果をImage Viewで表示させています。&lt;/p&gt;
+
+&lt;h1 id=&quot;androidのui&quot;&gt;AndroidのUI&lt;/h1&gt;
+&lt;p&gt;Video View, Audio Viewの表示切り替えにFragmentを使っています。&lt;br /&gt;
+が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。&lt;/p&gt;
+
+&lt;h1 id=&quot;最後に&quot;&gt;最後に&lt;/h1&gt;
+&lt;p&gt;AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。&lt;/p&gt;</content><author><name>FUJIBAYASHI, Masanori</name></author><summary type="html">はじめに AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、Storage Access Framework(SAF)を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。 背景 お仕事関係でAndroidプログラムを作る必要が発生しました。 要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。 Androidのストレージ周りは複雑怪奇・・・。 内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。 私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法はSAFしかありませんでした。 Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、SAFを使うべきです。 サンプルコードのリポジトリ githubのリポジトリ サンプルコードの簡単な説明 SAFはMIME Typeでフィルターできます。 そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときはaudio/*, video/*でフィルター、”Image Open”ボタンをタップしたときはimage/*でフィルターするようにしています。 コードそのものは、Googleのドキュメントの内容そのままです。 “Music Open”の選択結果をVideo Viewで再生させています。 また、”Image Open”の選択結果をImage Viewで表示させています。 AndroidのUI Video View, Audio Viewの表示切り替えにFragmentを使っています。 が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。 最後に AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。</summary></entry><entry><title type="html">Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル</title><link href="http://localhost:4000/java/2020/05/01/javaarraycopy/" rel="alternate" type="text/html" title="Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル" /><published>2020-05-01T00:00:00+09:00</published><updated>2020-05-01T00:00:00+09:00</updated><id>http://localhost:4000/java/2020/05/01/javaarraycopy</id><content type="html" xml:base="http://localhost:4000/java/2020/05/01/javaarraycopy/">&lt;h1 id=&quot;はじめに&quot;&gt;はじめに&lt;/h1&gt;
 
 &lt;p&gt;Javaでbyte配列からshort配列、Int配列にコピーする、その逆方向へコピーするコードを書く機会がありました。&lt;br /&gt;
 初めは普通にシフト演算で作ったのですが、Javaらしい書き方があるはずだとのことで調べたところ、ByteBufferクラスを使った書き方があることが解りました。&lt;/p&gt;

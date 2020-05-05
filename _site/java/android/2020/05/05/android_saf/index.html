@@ -83,6 +83,8 @@
 <link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="" />
+
 
 
 
@@ -109,16 +111,16 @@
 
 
 
-<meta name="description" content="プログラミングメモなどの置き場">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ちょっとしたメモ置き場">
-<meta property="og:url" content="http://localhost:4000/">
+<meta name="description" content="はじめに AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、Storage Access Framework(SAF)を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。 背景 お仕事関係でAndroidプログラムを作る必要が発生しました。 要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。 Androidのストレージ周りは複雑怪奇・・・。 内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。 私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法はSAFしかありませんでした。 Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、SAFを使うべきです。 サンプルコードのリポジトリ githubのリポジトリ サンプルコードの簡単な説明 SAFはMIME Typeでフィルターできます。 そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときはaudio/*, video/*でフィルター、”Image Open”ボタンをタップしたときはimage/*でフィルターするようにしています。 コードそのものは、Googleのドキュメントの内容そのままです。 “Music Open”の選択結果をVideo Viewで再生させています。 また、”Image Open”の選択結果をImage Viewで表示させています。 AndroidのUI Video View, Audio Viewの表示切り替えにFragmentを使っています。 が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。 最後に AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidのStorage Access Frameworkを使ったサンプル">
+<meta property="og:url" content="http://localhost:4000/java/android/2020/05/05/android_saf/">
 <meta property="og:site_name" content="ちょっとしたメモ置き場">
-<meta property="og:description" content="プログラミングメモなどの置き場">
+<meta property="og:description" content="はじめに AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、Storage Access Framework(SAF)を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。 背景 お仕事関係でAndroidプログラムを作る必要が発生しました。 要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。 Androidのストレージ周りは複雑怪奇・・・。 内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。 私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法はSAFしかありませんでした。 Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、SAFを使うべきです。 サンプルコードのリポジトリ githubのリポジトリ サンプルコードの簡単な説明 SAFはMIME Typeでフィルターできます。 そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときはaudio/*, video/*でフィルター、”Image Open”ボタンをタップしたときはimage/*でフィルターするようにしています。 コードそのものは、Googleのドキュメントの内容そのままです。 “Music Open”の選択結果をVideo Viewで再生させています。 また、”Image Open”の選択結果をImage Viewで表示させています。 AndroidのUI Video View, Audio Viewの表示切り替えにFragmentを使っています。 が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。 最後に AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。">
 <meta property="og:locale" content="ja">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ちょっとしたメモ置き場">
-<meta name="twitter:description" content="プログラミングメモなどの置き場">
+<meta name="twitter:title" content="AndroidのStorage Access Frameworkを使ったサンプル">
+<meta name="twitter:description" content="はじめに AndroidでUSBメモリに格納したファイルを開くにはどの手段を使うのが正解かを調べた結果、Storage Access Framework(SAF)を使うのが正解との結論に達したので、サンプルコードを書いて確認しました。 背景 お仕事関係でAndroidプログラムを作る必要が発生しました。 要件の一つにUSBメモリに格納したファイルを開く必要があったので、その方法を調べました。 Androidのストレージ周りは複雑怪奇・・・。 内蔵フラッシュでも、外付けストレージ扱いになったりしているのは知っていたけれども、予想以上の複雑さ。 私が調べた限りでは、USBメモリのファイルにアクセスする確実な方法はSAFしかありませんでした。 Androidのバージョンアップの度にUSBメモリへのアクセス方法が塞がれているようなので、SAFを使うべきです。 サンプルコードのリポジトリ githubのリポジトリ サンプルコードの簡単な説明 SAFはMIME Typeでフィルターできます。 そこで、”Music Open”ボタンと”Image Open”ボタンを用意し、”Music Open”ボタンをタップしたときはaudio/*, video/*でフィルター、”Image Open”ボタンをタップしたときはimage/*でフィルターするようにしています。 コードそのものは、Googleのドキュメントの内容そのままです。 “Music Open”の選択結果をVideo Viewで再生させています。 また、”Image Open”の選択結果をImage Viewで表示させています。 AndroidのUI Video View, Audio Viewの表示切り替えにFragmentを使っています。 が、あまり理解せずに実装したので、おかしなコードになっている可能性もあります。 最後に AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -151,7 +153,7 @@
 
 
 
-  <title>ちょっとしたメモ置き場</title>
+  <title>AndroidのStorage Access Frameworkを使ったサンプル | ちょっとしたメモ置き場</title>
   
 
 
@@ -176,7 +178,7 @@
   
   
 
-  <div class="container sidebar-position-left page-home ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,12 +292,9 @@
           <div id="content" class="content">
             
 
-
-
-<section id="posts" class="posts-expand">
+<div id="posts" class="posts-expand">
   
-    
-    
+  
 
   
 
@@ -324,12 +323,7 @@
           <h1 class="post-title" itemprop="name headline">
           
           
-            
-                
-                <a class="post-title-link" href="/java/android/2020/05/05/android_saf/" itemprop="url">
-                AndroidのStorage Access Frameworkを使ったサンプル
-              </a>
-            
+            AndroidのStorage Access Frameworkを使ったサンプル
           
         </h1>
         
@@ -402,6 +396,12 @@
           
 
           
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
 
         </div>
       </header>
@@ -414,7 +414,6 @@
 
       
         
-          
   
   
 
@@ -460,26 +459,27 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
 <p>AndroidのUI回りと言うか、基礎の部分を理解するためにお薦めの本やWebページはありませんかね。</p>
 
 
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/java/android/2020/05/05/android_saf/#" rel="contents">
-              続きを読む &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -487,239 +487,39 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
       
 
       
-
+      
+      
+      
       
 
       
-        
-        
-        
-        
-          <div class="post-eof"></div>
-        
       
-    </footer>
-  </article>
-
-  
-    
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/java/2020/05/01/javaarraycopy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FUJIBAYASHI, Masanori">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="assets/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ちょっとしたメモ置き場">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-          
-          
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
             
-                
-                <a class="post-title-link" href="/java/2020/05/01/javaarraycopy/" itemprop="url">
-                Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/java/2020/05/01/javaarraycopy/" rel="prev" title="Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル">
+                Javaでbyte配列からshort配列、int配列へコピー、その逆のサンプル <i class="fa fa-chevron-right"></i>
               </a>
             
-          
-        </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="" itemprop="dateCreated datePublished" datetime="2020-05-01T00:00:00+09:00">
-                2020-05-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/category/#/Java" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <h1 id="はじめに">はじめに</h1>
-
-<p>Javaでbyte配列からshort配列、Int配列にコピーする、その逆方向へコピーするコードを書く機会がありました。<br />
-初めは普通にシフト演算で作ったのですが、Javaらしい書き方があるはずだとのことで調べたところ、ByteBufferクラスを使った書き方があることが解りました。</p>
-
-<h1 id="githubのリポジトリ">githubのリポジトリ</h1>
-<p><a href="https://github.com/mfujibayashi/JavaArrayCoppy">githubのリポジトリ</a></p>
-
-<h1 id="ポイント">ポイント</h1>
-<p><code class="language-plaintext highlighter-rouge">ByteBuffer.order()</code>でエンディアンを指定します。<br />
-値を入力するときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.put()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.putShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.pusInt()</code>を使います。<br />
-値を得るときは、<code class="language-plaintext highlighter-rouge">ByteBuffer.get()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getShort()</code>, <code class="language-plaintext highlighter-rouge">ByteBuffer.getInt()</code>を使います。</p>
-
-<p>これでエンディアンを考慮した値のコピーが出来ます。<br />
-例えば、byte配列からInt配列へのコピーは次のようなコードになります。</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19</pre></td><td class="code"><pre class="highlight"><code>  <span class="kd">public</span>  <span class="kt">void</span> <span class="nf">copyArrayFromByte</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">byteArray</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">intArray</span><span class="o">){</span>
-    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">intArray</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
-
-    <span class="nc">ByteBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nc">ByteBuffer</span><span class="o">.</span><span class="na">allocate</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">BYTES</span><span class="o">*</span><span class="n">length</span><span class="o">);</span>
-    <span class="k">if</span><span class="o">(</span><span class="n">isEndian</span> <span class="o">==</span> <span class="nc">Endian</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">){</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">BIG_ENDIAN</span><span class="o">);</span>
-    <span class="o">}</span><span class="k">else</span><span class="o">{</span>
-        <span class="n">buffer</span><span class="o">.</span><span class="na">order</span><span class="o">(</span><span class="nc">ByteOrder</span><span class="o">.</span><span class="na">LITTLE_ENDIAN</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">length</span><span class="o">*</span><span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-      <span class="n">buffer</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">byteArray</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
-    <span class="o">}</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="na">flip</span><span class="o">();</span>
-    <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-      <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span>  <span class="n">buffer</span><span class="o">.</span><span class="na">getInt</span><span class="o">();</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-</code></pre></td></tr></tbody></table></div></div>
-
-<p>「ビッグエンディアンは最上位桁がアドレス下位になるので」、みたいなことを思い出さずに済みます。</p>
-
-<h1 id="サンプルコード">サンプルコード</h1>
-
-<p>サンプルコードでは配列間コピーをするクラスを作成しています。<br />
-コードを見て直ぐに内容がわかると思うので、参考にしてください。</p>
-
-<h1 id="最後に">最後に</h1>
-
-<p>もうちょっと良い書き方がありそうな気がしています。</p>
-
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/java/2020/05/01/javaarraycopy/#" rel="contents">
-              続きを読む &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
+        </div>
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
-      
-
-      
-
-      
-        
-        
-        
-        
-          <div class="post-eof"></div>
-        
       
     </footer>
   </article>
 
-  
-</section>
-
-
-
+  <div class="post-spread">
+    
+  </div>
+</div>
 
 
           </div>
@@ -727,6 +527,10 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -744,10 +548,30 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
     <div class="sidebar-inner">
 
       
+        
+        
+        
+
+
+
+
+
+
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/assets/images/avatar.gif"
@@ -809,6 +633,34 @@ Androidのバージョンアップの度にUSBメモリへのアクセス方法�
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-1"> <a class="nav-link" href="#はじめに"> <span class="nav-number">1</span> <span class="nav-text">はじめに</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#背景"> <span class="nav-number">2</span> <span class="nav-text">背景</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#サンプルコードのリポジトリ"> <span class="nav-number">3</span> <span class="nav-text">サンプルコードのリポジトリ</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#サンプルコードの簡単な説明"> <span class="nav-number">4</span> <span class="nav-text">サンプルコードの簡単な説明</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#androidのui"> <span class="nav-number">5</span> <span class="nav-text">AndroidのUI</span> </a> </li> <li class="nav-item nav-level-1"> <a class="nav-link" href="#最後に"> <span class="nav-number">6</span> <span class="nav-text">最後に</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
